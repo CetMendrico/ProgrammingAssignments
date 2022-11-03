@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <h1>Assignment 3 - Nth Factorial, Sum, and Average</h1>
+</head>
+<body>
+    <p><h2>Input Intger n value here:</h2></p>
+        <input type = "number" placeholder = "Integer value N" id = "IntegerN"><br>
+        <button onclick = "nthFactorial()">Display Nth Factorial</button>
+        <p><strong><span id = "NT"></strong></p>
+        <p><strong><span id = "Nth"></strong></p>
+        <button onclick = "sum()">Display Sum</button>
+        <p><strong><span id = "SU"></strong></p>
+        <p><strong><span id = "Sum"></strong></p>
+        <button onclick = "average()">Display Average</button>
+        <p><strong><span id = "AV"></strong></p>
+        <p><strong><span id = "Average"></strong></p>
+
+    <script>
+        function nthFactorial(){
+        value = document.getElementById("IntegerN").value;
+        val = 0
+        nthloop = "";
+        i = 1;
+
+        while (i <= value){
+        nthloop += i + " ";
+        i++;
+        val = value * (value - 1) * i * 1;
+        }
+
+        document.getElementById("NT").innerHTML = "The Nth Factorial of: " + value;
+        document.getElementById("Nth").innerHTML = nthloop + "       " + value + "! = " + val;
+        }
+    </script>
+    
+    <script>
+        function sum(){
+        value = document.getElementById("IntegerN").value;
+        sumloop = "";
+        i = 1;
+        add = 0;
+
+        do {
+            sumloop += i + " ";
+            add = add + i;
+            i++;
+        } while (i <= value);
+
+        document.getElementById("SU").innerHTML = "The sum of the first " + value + " numbers:";
+        document.getElementById("Sum").innerHTML = sumloop + " SUM: " + add;
+        }
+    </script>
+
+    <script>
+        function average(){
+        value = document.getElementById("IntegerN").value;
+        aver = 0;
+
+        for (i = 1, averloop = ""; i <= value; i++){
+        averloop += i + " ";
+        aver = aver + i;
+        }
+
+        document.getElementById("AV").innerHTML = "The average of the first " + value + " numbers:";
+        document.getElementById("Average").innerHTML = averloop + "AVERAGE: " + aver / value;
+        }
+    </script>
+</body>
+</html>
