@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <h1>Assignment 1 - Conversion</h1>
+</head>
+<body>
+    <p><strong><h2>Fahrenheit to Celsius</h2></p>   
+            <label for = "GivenI">Fahrenheit:</label>
+            <input id = "GivenI" type = "number" placeholder="Fahrenheit"><br>
+            <button onclick = "solutionI()">Convert</button></strong>
+
+        <script>
+            function solutionI(value) {
+            value = document.getElementById("GivenI").value;
+            answerI = (value - 32) * 5 / 9;
+            alert("The Conversion is " + answerI +" C");
+            }
+        </script>
+
+    <p><strong><h2>Celsius to Fahrenheit</h2></p>
+        <label for = "GivenII">Celsius:</label>
+        <input type = "number" id = "GivenII" placeholder="Celsius"><br>
+        <button onclick = "solutionII()">Convert</button></strong>
+
+        <script>
+            function solutionII(value){
+            value = document.getElementById("GivenII").value;
+            answerII = (value * 1.8) + 32;
+            alert("The Conversion is " + answerII +" F"); 
+            }
+        </script>
+
+    <p><strong><h2>Meters to Feet</h2></p>
+        <label for = "GivenIII">Meters:</label>
+        <input type = "number" id = "GivenIII" placeholder="Meters"><br>
+        <button onclick = "solutionIII()">Convert</button></strong>
+
+        <script>
+            function solutionIII(value){
+            value = document.getElementById("GivenIII").value;
+            answerIII = value * 3.281;
+            alert("The Conversion is " + answerIII +" Feet"); 
+            }
+        </script>
+
+    <p><strong><h2>Feet to Meters</h2></p>
+        <label for = "GivenIV">Feet:</label>
+        <input type = "number" id = "GivenIV" placeholder="Meters"><br>
+        <button onclick = "solutionIV()">Convert</button></strong>
+
+        <script>
+            function solutionIV(value){
+            value = document.getElementById("GivenIV").value;
+            answerIV = value / 3.281;
+            alert("The Conversion is " + answerIV +" Meter/s"); 
+            }
+        </script>
+</body>
+</html>
