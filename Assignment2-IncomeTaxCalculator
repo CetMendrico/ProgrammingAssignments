@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+     <h1>Assignment 2 - Income Tax Calculator</h1>
+</head>
+<body>
+    <p><h2>Input Taxable Income here:</h2></p>
+        <input type = "number" placeholder = "Taxable Income" id = "InputMe"></br>
+        <button onclick = "incomeTax()">Compute</button>
+
+        <p><strong><span id = "Answer"></strong></p>
+
+    <script>
+        function incomeTax(){
+        value = document.getElementById("InputMe").value;
+        if (value < 250000){
+        document.getElementById("Answer").innerHTML = "The Income Tax for " + value + " is 0.00";
+        }
+        else if (value >= 250000 && value < 400000){
+        inTax = (value - 250000) * 0.20 ;
+        document.getElementById("Answer").innerHTML = "The Income Tax for " + value + " is " + inTax.toFixed(2);
+        }
+        else if (value >= 400000  && value < 800000){
+        inTax = (value - 400000) * 0.25 + 30000;
+        document.getElementById("Answer").innerHTML = "The Income Tax for " + value + " is " + inTax.toFixed(2);
+        }
+        else if (value >= 800000 && value < 2000000){
+        inTax = (value - 800000) * 0.30 + 130000;
+        document.getElementById("Answer").innerHTML = "The Income Tax for " + value + " is " + inTax.toFixed(2);
+        }
+        else if (value >= 2000000 && value < 8000000){
+        inTax = (value - 2000000) * 0.32 + 490000;
+        document.getElementById("Answer").innerHTML = "The Income Tax for " + value + " is " + inTax.toFixed(2);
+        }
+        else {
+        inTax = (value - 8000000) * 0.35 + 2410000;
+        document.getElementById("Answer").innerHTML = "The Income Tax for " + value + " is " + inTax.toFixed(2);
+        }
+        }
+    </script>
+</body>
+</html>
